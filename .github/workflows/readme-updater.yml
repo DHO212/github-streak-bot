@@ -1,0 +1,41 @@
+name: 📊 Update README Stats
+
+on:
+  schedule:
+    - cron: '30 0 * * *'  # 00:30 UTC daily (after streak commit)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-streak-bot"
+          git config user.email "streak-bot@users.noreply.github.com"
+
+      - name: Update README with streak stats
+        run: |
+          chmod +x scripts/update-readme.sh
+          bash scripts/update-readme.sh
+
+      - name: Commit and push if changed
+        run: |
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "🔄 Update README streak visualization - $(date -u +%Y-%m-%d)"
+            git push
+          fi

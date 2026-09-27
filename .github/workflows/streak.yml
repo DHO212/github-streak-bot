@@ -1,0 +1,46 @@
+name: 🔥 Daily Streak Commit
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Midnight UTC daily
+  workflow_dispatch:  # Allow manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-streak-bot"
+          git config user.email "streak-bot@users.noreply.github.com"
+
+      - name: Generate daily commit
+        run: |
+          chmod +x scripts/generate-commit.sh
+          bash scripts/generate-commit.sh
+
+      - name: Update README stats
+        run: |
+          chmod +x scripts/update-readme.sh
+          bash scripts/update-readme.sh
+
+      - name: Commit and push updates
+        run: |
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "📊 Update streak stats - $(date -u +%Y-%m-%d)"
+            git push
+          fi
