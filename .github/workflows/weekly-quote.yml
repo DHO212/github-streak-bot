@@ -1,0 +1,71 @@
+name: "💬 Weekly Quote Update"
+
+on:
+  schedule:
+    - cron: '0 8 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-quote:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Select random quote and update README
+        run: |
+          chmod +x scripts/*.sh
+
+          # Select random quote using node
+          QUOTE_JSON=$(node -e "
+            const fs = require('fs');
+            const quotes = JSON.parse(fs.readFileSync('data/quotes.json', 'utf8'));
+            const q = quotes[Math.floor(Math.random() * quotes.length)];
+            console.log(JSON.stringify(q));
+          ")
+
+          TEXT=$(echo "$QUOTE_JSON" | jq -r '.text')
+          AUTHOR=$(echo "$QUOTE_JSON" | jq -r '.author')
+          CURRENT_DATE=$(date -u +"%Y-%m-%d")
+
+          # Remove old Quote of the Week section
+          sed -i '/<!-- QUOTE_WEEKLY_START -->/,/<!-- QUOTE_WEEKLY_END -->/d' README.md
+
+          # Build new section content
+          {
+            echo ""
+            echo "---"
+            echo ""
+            echo "<!-- QUOTE_WEEKLY_START -->"
+            echo "## 💬 Quote of the Week"
+            echo ""
+            echo "> \"$TEXT\""
+            echo "> — **$AUTHOR**"
+            echo ""
+            echo "_Updated: $CURRENT_DATE_"
+            echo ""
+            echo "<!-- QUOTE_WEEKLY_END -->"
+          } >> README.md
+
+      - name: Commit and push changes
+        run: |
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "💬 Weekly quote update — $(date -u +%Y-%m-%d)"
+            git push
+          fi
