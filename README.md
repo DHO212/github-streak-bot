@@ -166,3 +166,15 @@ MIT License - see [LICENSE](LICENSE) for details.
 <p align="center">
   Made with ❤️ by <a href="https://github.com/DHO212">DHO212</a>
 </p>
+
+---
+
+<!-- QUOTE_WEEKLY_START -->
+## 💬 Quote of the Week
+
+> "If life were predictable it would cease to be life and be without flavor."
+> — **Eleanor Roosevelt**
+
+_Updated: 
+
+<!-- QUOTE_WEEKLY_END -->
