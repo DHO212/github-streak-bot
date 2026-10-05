@@ -169,11 +169,14 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
+
+---
+
 <!-- QUOTE_WEEKLY_START -->
 ## 💬 Quote of the Week
 
-> "If life were predictable it would cease to be life and be without flavor."
-> — **Eleanor Roosevelt**
+> "The secret of getting ahead is getting started."
+> — **Mark Twain**
 
 _Updated: 
 
