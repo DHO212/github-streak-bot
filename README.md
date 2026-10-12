@@ -172,11 +172,14 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
+
+---
+
 <!-- QUOTE_WEEKLY_START -->
 ## 💬 Quote of the Week
 
-> "The secret of getting ahead is getting started."
-> — **Mark Twain**
+> "Eighty percent of success is showing up."
+> — **Woody Allen**
 
 _Updated: 
 
