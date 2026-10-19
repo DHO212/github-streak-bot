@@ -175,11 +175,14 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
+
+---
+
 <!-- QUOTE_WEEKLY_START -->
 ## 💬 Quote of the Week
 
-> "Eighty percent of success is showing up."
-> — **Woody Allen**
+> "Life is 10% what happens to me and 90% of how I react to it."
+> — **Charles Swindoll**
 
 _Updated: 
 
