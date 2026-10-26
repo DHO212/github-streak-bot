@@ -178,11 +178,14 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
+
+---
+
 <!-- QUOTE_WEEKLY_START -->
 ## 💬 Quote of the Week
 
-> "Life is 10% what happens to me and 90% of how I react to it."
-> — **Charles Swindoll**
+> "The only impossible journey is the one you never begin."
+> — **Tony Robbins**
 
 _Updated: 
 
