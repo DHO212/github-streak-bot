@@ -181,11 +181,14 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
+
+---
+
 <!-- QUOTE_WEEKLY_START -->
 ## 💬 Quote of the Week
 
-> "The only impossible journey is the one you never begin."
-> — **Tony Robbins**
+> "Life isn't about getting and having, it's about giving and being."
+> — **Kevin Kruse**
 
 _Updated: 
 
