@@ -184,11 +184,14 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
+
+---
+
 <!-- QUOTE_WEEKLY_START -->
 ## 💬 Quote of the Week
 
-> "Life isn't about getting and having, it's about giving and being."
-> — **Kevin Kruse**
+> "It always seems impossible until it's done."
+> — **Nelson Mandela**
 
 _Updated: 
 
