@@ -187,11 +187,14 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
+
+---
+
 <!-- QUOTE_WEEKLY_START -->
 ## 💬 Quote of the Week
 
-> "It always seems impossible until it's done."
-> — **Nelson Mandela**
+> "Dream bigger. Do bigger."
+> — **Unknown**
 
 _Updated: 
 
