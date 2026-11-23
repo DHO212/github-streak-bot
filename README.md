@@ -190,11 +190,14 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
+
+---
+
 <!-- QUOTE_WEEKLY_START -->
 ## 💬 Quote of the Week
 
-> "Dream bigger. Do bigger."
-> — **Unknown**
+> "Strive not to be a success, but rather to be of value."
+> — **Albert Einstein**
 
 _Updated: 
 
